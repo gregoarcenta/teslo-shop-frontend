@@ -8,13 +8,11 @@ import ProductsPage from "./shop/pages/products/ProductsPage";
 import CartPage from "./shop/pages/cart/CartPage";
 import FavoritesPage from "./shop/pages/favorites/FavoritesPage";
 import ProfilePage from "./shop/pages/profile/ProfilePage";
-import { LoginPage } from "./auth/pages/login/LoginPage";
-import RegisterPage from "./auth/pages/register/RegisterPage";
+import { AuthPage } from "./auth/pages/auth/AuthPage";
 import { AdminProductsPage } from "./admin/pages/products/AdminProductsPage";
 import { AdminProductPage } from "./admin/pages/product/AdminProductPage";
 import NotFound from "./shop/pages/404/NotFound";
 
-const AuthLayout = lazy(() => import("./auth/layouts/AuthLayout"));
 const AdminLayout = lazy(() => import("./admin/layout/AdminLayout"));
 
 export const appRouter = createBrowserRouter([
@@ -26,6 +24,10 @@ export const appRouter = createBrowserRouter([
       {
         index: true,
         element: <HomePage />
+      },
+      {
+        path: "/auth",
+        element: <AuthPage />
       },
       {
         path: "products",
@@ -50,25 +52,6 @@ export const appRouter = createBrowserRouter([
       {
         path: "*",
         element: <NotFound />
-      }
-    ]
-  },
-  // Auth routes
-  {
-    path: "/auth",
-    element: <AuthLayout />,
-    children: [
-      {
-        index: true,
-        element: <Navigate to="/auth/login" />
-      },
-      {
-        path: "login",
-        element: <LoginPage />
-      },
-      {
-        path: "register",
-        element: <RegisterPage />
       }
     ]
   },
