@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 const AdminLayout = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   return (
-    <div className="bg-gray-50 flex">
+    <div className="bg-gray-50 min-h-screen flex">
       <AdminSidebar
         isCollapsed={sidebarCollapsed}
         onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
