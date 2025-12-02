@@ -68,7 +68,7 @@ export const AuthPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-secondary/20 px-4 py-12">
+    <div className="min-h-[calc(100vh-65px)] flex items-center justify-center bg-secondary/10 px-4 py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-linear-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-2 font-montserrat">

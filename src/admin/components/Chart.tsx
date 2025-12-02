@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ChartProps {
   title: string;
@@ -6,7 +6,7 @@ interface ChartProps {
 }
 
 const Chart: React.FC<ChartProps> = ({ title, data }) => {
-  const maxValue = Math.max(...data.map(d => d.value));
+  const maxValue = Math.max(...data.map((d) => d.value));
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
@@ -18,8 +18,8 @@ const Chart: React.FC<ChartProps> = ({ title, data }) => {
               {item.label}
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-3">
-              <div 
-                className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out"
+              <div
+                className="bg-linear-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out"
                 style={{ width: `${(item.value / maxValue) * 100}%` }}
               ></div>
             </div>

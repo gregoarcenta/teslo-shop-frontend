@@ -60,7 +60,7 @@ const performanceData = [
   { label: "Bounce Rate", value: 23 }
 ];
 
-const DashboardPage = () => {
+export const DashboardPage = () => {
   return (
     <>
       {/* Welcome Section */}
@@ -179,5 +179,3 @@ const DashboardPage = () => {
     </>
   );
 };
-
-export default DashboardPage;
